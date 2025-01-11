@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - EXCHANGE_RATE_API_KEY=${EXCHANGE_RATE_API_KEY}
+
+  cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
