@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Global Purchasing Power Calculator
+
+This is a [Next.js](https://nextjs.org) project designed to calculate global purchasing power based on the input amount and currency.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Ensure you have [Docker](https://www.docker.com/) installed on your machine.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Platform
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Before proceeding, ensure that Docker is running on your machine.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository to your machine:
 
-## Learn More
+   ```bash
+   git clone repository_url_here
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Navigate to the project directory and create a `.env` file in the root with the following content:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```env
+   EXCHANGE_RATE_API_KEY=your_api_key_here
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   You can obtain the API key from [ExchangeRate API](https://www.exchangerate-api.com/).
 
-## Deploy on Vercel
+Before proceeding, ensure that Docker is running on your machine.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Follow these steps to run the platform:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Open a terminal and navigate to the project directory.
+
+2. Stop and remove any existing containers and volumes (if applicable) by running:
+
+   ```bash
+   docker-compose down -v
+   ```
+
+3. Build and start the application using Docker Compose:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. Once the application is running, open your browser and go to:
+
+   [http://localhost:3000](http://localhost:3000)
+
+### Using the Platform
+
+1. On the homepage, enter the amount of money and the currency you want to use for the calculation.
+
+2. Click on **Calculate Purchasing Power** to process your input.
+
+3. Once the calculation is complete, scroll down to view your purchasing power in different countries.
