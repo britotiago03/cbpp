@@ -6,11 +6,10 @@ This is a [Next.js](https://nextjs.org) project designed to calculate global pur
 
 ### Prerequisites
 
+- Ensure you have [Git](https://git-scm.com/) installed on your machine.
 - Ensure you have [Docker](https://www.docker.com/) installed on your machine.
 
 ### Running the Platform
-
-Before proceeding, ensure that Docker is running on your machine.
 
 1. Clone the repository to your machine:
 
